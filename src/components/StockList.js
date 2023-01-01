@@ -3,6 +3,7 @@ import finnHubApi from '../assets/api/finnHubApi';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs"
 import { stockListContext } from '../context/StockListContext';
 import { useNavigate } from 'react-router-dom';
+import '../../src/App.css'
 
 const StockList = () => {
 
@@ -65,8 +66,8 @@ const StockList = () => {
                         <th scope='col'> Low </th>
                         <th scope='col'> Open </th>
                         <th scope='col'> Pclose </th>
-                        <th scope='col'> Timeseries </th>
-                        <th scope='col'> Remove </th>
+                        <th scope='col'>  </th>
+                        <th scope='col'>  </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -83,11 +84,11 @@ const StockList = () => {
                                 <td>{stockData.data.o}</td>
                                 <td>{stockData.data.pc}</td>
                                 <td> 
-                                    <button className="btn btn-success btn-sm ml-3 d-inline-block" 
+                                    <button className="btn btn-success btn-sm ml-3 d-inline-block hover-button" 
                                             onClick={()=>handleStockSelect(stockData.symbol)} >Details</button>
                                 </td>
                                 <td > 
-                                    <button className="btn btn-danger btn-sm ml-3 d-inline-block delete-button" 
+                                    <button className="btn btn-danger btn-sm ml-3 d-inline-block hover-button" 
                                             
                                             onClick={(e) => {
                                                 e.stopPropagation()
