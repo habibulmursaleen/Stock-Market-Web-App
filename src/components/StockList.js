@@ -89,9 +89,7 @@ const StockList = () => {
                                 </td>
                                 <td > 
                                     <button className="btn btn-danger btn-sm ml-3 d-inline-block hover-button" 
-                                            
                                             onClick={(e) => {
-                                                e.stopPropagation()
                                                 deleteStock(stockData.symbol)
                                             }}>Remove</button>
                                 </td>
